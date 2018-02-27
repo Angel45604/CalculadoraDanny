@@ -73,6 +73,22 @@ public class MainActivity extends AppCompatActivity {
 
             txt.setText(txt.getText().toString()+")");
 
+        }else if(a.equals("^")) {
+
+            txt.setText(txt.getText().toString()+"^");
+
+        }else if(a.equals("sin")) {
+
+            txt.setText(txt.getText().toString()+"sin(");
+
+        }else if(a.equals("cos")) {
+
+            txt.setText(txt.getText().toString()+"cos(");
+
+        }else if(a.equals("tan")) {
+
+            txt.setText(txt.getText().toString()+"tan(");
+
         } else if (a.equals("=")) {
 
             String mathExpr = infijoAPostfijo(txt.getText().toString());
@@ -255,6 +271,8 @@ public class MainActivity extends AppCompatActivity {
                 return (num1 / num2);
             if (op.equals("^"))
                 return (Math.pow(num1, num2));
+            if (op.equals("sin"))
+                return Math.sin(num1);
             return 0d;
         }
         catch(Exception e)
